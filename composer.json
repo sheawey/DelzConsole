@@ -1,0 +1,21 @@
+{
+  "name": "delz/console",
+  "description": "delz控制台组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "徐威",
+      "email": "sheawey@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Delz\\Console\\": "src/Delz/Console"
+    }
+  }
+}
