@@ -21,6 +21,7 @@
 2. 设置前景色、背景色和控制选项
 
 前景色和前景色有：black、red、green、yellow、blue、magenta（紫红色）、cyan（青色）、white、default
+
 控制选项有：bold、underscore、blink（闪）、reverse（反转）、conceal（隐藏）
 
 ```php
@@ -79,9 +80,11 @@
 1. 添加命令
 
 命令必须实现ICommand和集成抽象类Command
+
 命令类必须实现execute方法，此方法有两个参数：
 
 IInput $input 输入参数对象，获取参数可以调用方法 $input->getArguments()
+
 IOutput $output 输入对象
 
 下面是Command下的HelloCommand的执行
@@ -153,7 +156,9 @@ IOutput $output 输入对象
 ```
 
 执行  php console.php 默认会出现命令列表
+
 执行 php console.php hello 会执行HelloCommand，这里HelloCommand的name是hello
+
 执行 php console.php hello -v 会显示HelloCommand命令的版本
 
 
