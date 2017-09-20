@@ -247,7 +247,7 @@ abstract class Command implements ICommand
      */
     protected function validateName($name)
     {
-        if (!preg_match('/^[a-zA-Z0-9-_]+$/', $name)) {
+        if (!preg_match('/^[a-zA-Z0-9-_:]+$/', $name)) {
             throw new InvalidArgumentException(sprintf('Command name "%s" is invalid.', $name));
         }
     }
