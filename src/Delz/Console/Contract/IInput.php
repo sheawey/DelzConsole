@@ -10,6 +10,11 @@ namespace Delz\Console\Contract;
 interface IInput extends \ArrayAccess
 {
     /**
+     * 获取命令名称
+     */
+    public function getName();
+    
+    /**
      * 获取第一个参数
      *
      * @return string
