@@ -12,12 +12,28 @@ use Delz\Console\Exception\InvalidArgumentException;
  */
 abstract class Input implements IInput
 {
+
+    /**
+     * 命令名称
+     *
+     * @var string
+     */
+    protected $name;
+
     /**
      * 参数数组
      *
      * @var array
      */
     protected $arguments = [];
+
+    /**
+     * 获取命令名称
+     */
+    public function getName()
+    {
+        return $this->name;ß
+    }
 
     /**
      * {@inheritdoc}
@@ -59,12 +75,12 @@ abstract class Input implements IInput
      */
     public function hasArgument($name)
     {
-        if(is_string($name)) {
+        if (is_string($name)) {
             return isset($this->arguments[$name]);
         }
-        if(is_array($name)) {
-            foreach($name as $item) {
-                if(isset($this->arguments[$item])) {
+        if (is_array($name)) {
+            foreach ($name as $item) {
+                if (isset($this->arguments[$item])) {
                     return true;
                 }
             }

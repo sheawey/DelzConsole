@@ -19,7 +19,7 @@ class ArgvInput extends Input
         }
 
         //去掉命令行名称
-        array_shift($argv);
+        $this->name = array_shift($argv);
 
         while(null !== $a = array_shift($argv)) {
             $arr = explode('=', $a);
