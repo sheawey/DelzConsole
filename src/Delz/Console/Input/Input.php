@@ -32,7 +32,7 @@ abstract class Input implements IInput
      */
     public function getName()
     {
-        return $this->name;ß
+        return $this->name;
     }
 
     /**
