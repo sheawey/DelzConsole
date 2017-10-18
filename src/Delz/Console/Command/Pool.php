@@ -29,7 +29,6 @@ class Pool implements IPool
             $command->setPool(null);
             return false;
         }
-        $command->setPool($this);
         $this->commands[$command->getName()] = $command;
         foreach($command->getAliases() as $alias) {
             $this->commands[$alias] = $command;

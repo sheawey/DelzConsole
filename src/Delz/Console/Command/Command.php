@@ -7,7 +7,6 @@ use Delz\Console\Input\ArrayInput;
 use Delz\Console\Contract\ICommand;
 use Delz\Console\Contract\IInput;
 use Delz\Console\Contract\IOutput;
-use Delz\Console\Contract\IPool;
 use Delz\Console\Exception\InvalidArgumentException;
 use Delz\Console\Exception\LogicException;
 use Delz\Console\Output\Stream;
@@ -19,13 +18,6 @@ use Delz\Console\Output\Stream;
  */
 abstract class Command implements ICommand
 {
-
-    /**
-     * 命令容器
-     *
-     * @var IPool
-     */
-    private $pool;
 
     /**
      * 命令名称
@@ -184,24 +176,6 @@ abstract class Command implements ICommand
     public function isEnabled()
     {
         return true;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getPool()
-    {
-        return $this->pool;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setPool(IPool $pool = null)
-    {
-        $this->pool = $pool;
-
-        return $this;
     }
 
     /**

@@ -76,20 +76,6 @@ interface ICommand
      */
     public function isEnabled();
 
-    /**
-     * 获取命令容器
-     *
-     * @return IPool
-     */
-    public function getPool();
-
-    /**
-     * 设置命令容器
-     *
-     * @param IPool $pool
-     */
-    public function setPool(IPool $pool = null);
-
 
     /**
      * 获取版本号
