@@ -76,11 +76,11 @@ abstract class Input implements IInput
     public function hasArgument($name)
     {
         if (is_string($name)) {
-            return isset($this->arguments[$name]);
+            return array_key_exists($name, $this->arguments);
         }
         if (is_array($name)) {
             foreach ($name as $item) {
-                if (isset($this->arguments[$item])) {
+                if (array_key_exists($item, $this->arguments)) {
                     return true;
                 }
             }
