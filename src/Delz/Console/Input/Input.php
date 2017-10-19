@@ -41,7 +41,7 @@ abstract class Input implements IInput
     public function getFirstArgument()
     {
         foreach ($this->arguments as $k => $v) {
-            if (strpos($k, '=') !== 0) {
+            if (is_null($v)) {
                 return $k;
             }
         }
